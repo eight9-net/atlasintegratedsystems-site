@@ -1,0 +1,29 @@
+@use "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap');
+@plugin "daisyui" {
+  themes: corporate --default;
+  root: ":root";
+  logs: true;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fixed-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.headline {
+  font-family: 'Noto Serif Georgian', serif;
+  line-height: 1.5em;
+}
+
+.scroll-target {
+  position: absolute;
+  margin-top: -132px;
+  z-index: -1;
+}
