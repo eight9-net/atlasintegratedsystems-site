@@ -16,7 +16,7 @@
 
 <template>
   <header class="sticky top-0 z-50 header">
-    <div class="shadow-sm navbar bg-base-100">
+    <div class="shadow-sm navbar bg-header-color text-white">
       <div class="navbar-start flex-2">
         <details ref="mobileMenuElement" class="dropdown">
           <summary class="btn btn-lg btn-ghost lg:hidden" @click="toggleMobileNav">
@@ -24,14 +24,14 @@
             <font-awesome-icon :icon="['fa', 'times']" size="lg" v-if="isOpen" />
           </summary>
           <navigation-menu
-            classes="menu menu-compact text-lg dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100"
+            classes="menu menu-compact text-lg dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100 text-black"
             :hover="false"
             :border="false"
             @emitCloseMenu="handleCloseMenu"
           />
         </details>
         <router-link :to="{ name: 'home' }">
-          <img class="max-w-[275px] sm:max-w-[400px]" :src="useGetImageUrl('scada-solutions-logo.png')" alt="SCADA Solutions" />
+          <img class="max-w-[400px] lg:max-w-[500px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="$companyName" />
         </router-link>
       </div>
 

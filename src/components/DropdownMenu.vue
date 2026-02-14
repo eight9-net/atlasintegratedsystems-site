@@ -30,6 +30,10 @@
       type: Boolean,
       default: false
     },
+    classes: {
+      type: String,
+      default: 'bg-base-100 rounded-t-none p-2 subnav z-50 w-85 text-black'
+    }
   });
 
   const borderClass = ref(props.border ? 'border border-gray-300' : '');
@@ -61,13 +65,13 @@
 <template>
   <li>
     <details v-element-hover="[onHover, { delayEnter: 300 }]" :open="isHovered">
-      <summary>
+      <summary class="hover:text-sky-400 active:text-sky-400 transition-colors">
         <a v-if="link" @click="goto(link, true)">{{ title }}</a>
         <span v-else>{{ title }}</span>
       </summary>
-      <ul :class="`bg-base-100 rounded-t-none ${borderClass} p-2 w-52 subnav z-50`">
+      <ul :class="`${classes} ${borderClass}`">
         <li v-for="(item, index) in links" :key="index">
-          <a href="javascript://" @click="goto({ name: item.name, hash: item.hash })">{{ item.title }}</a>
+          <a href="javascript://" class="hover:text-sky-400 active:text-sky-400 transition-colors" @click="goto({ name: item.name, hash: item.hash })">{{ item.title }}</a>
         </li>
       </ul>
     </details>

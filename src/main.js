@@ -14,6 +14,7 @@ import {
   faTimes,
   faCircle,
   faChevronRight,
+  faMapLocationDot,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faBars,
@@ -22,6 +23,7 @@ library.add(
   faTimes,
   faCircle,
   faChevronRight,
+  faMapLocationDot,
 );
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 library.add(
@@ -36,7 +38,7 @@ app.use(pinia);
 // Global Variables
 app.config.globalProperties.$companyName = 'Atlas Integrated Systems, Inc.';
 app.config.globalProperties.$contactEmail = 'info@atlasintegratedsystems.com';
-app.config.globalProperties.$contactPhone = '+9495099605';
+app.config.globalProperties.$contactPhone = '+19495099605';
 app.config.globalProperties.$companyAddress = '6789 Quail Hill Parkway, Suite #405, Irvine, CA 92603';
 app.config.globalProperties.$companyLicense = '777306';
 app.config.globalProperties.$companyACO = '6678';
