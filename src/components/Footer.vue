@@ -45,7 +45,7 @@
       </div>
 
       <div class="flex items-center justify-center w-full pb-5 text-lg headline">
-        <h2 class="p-2 text-white text-1xl">Communication Systems Design</h2>
+        <h2 class="p-2 text-white text-1xl">Communications Systems Design</h2>
       </div>
     </div>
   </footer>

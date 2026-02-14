@@ -33,7 +33,7 @@
     classes: {
       type: String,
       default: 'bg-base-100 rounded-t-none p-2 subnav z-50 w-85 text-black'
-    }
+    },
   });
 
   const borderClass = ref(props.border ? 'border border-gray-300' : '');
