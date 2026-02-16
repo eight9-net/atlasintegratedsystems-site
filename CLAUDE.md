@@ -38,7 +38,7 @@ Four components are registered globally in `src/main.js` and available in all te
 
 ### Global Properties
 
-Company info is available on all component instances via `this.$companyName`, `this.$contactEmail`, `this.$contactPhone`, `this.$companyAddress`, `this.$companyLicense`, `this.$companyACO` (set in `src/main.js`).
+Company info is available on all component instances via `siteProperties` (set in `src/main.js`).
 
 ### API Layer
 
