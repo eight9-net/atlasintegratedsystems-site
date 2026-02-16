@@ -3,6 +3,7 @@ import { createPinia } from 'pinia';
 import './style.scss';
 import App from './App.vue';
 import router from './router';
+import { useFormatPhone } from './composables/utils';
 
 /* Font Awesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -36,12 +37,18 @@ app.use(pinia);
 
 
 // Global Variables
-app.config.globalProperties.$companyName = 'Atlas Integrated Systems, Inc.';
-app.config.globalProperties.$contactEmail = 'info@atlasintegratedsystems.com';
-app.config.globalProperties.$contactPhone = '+19495099605';
-app.config.globalProperties.$companyAddress = '6789 Quail Hill Parkway, Suite #405, Irvine, CA 92603';
-app.config.globalProperties.$companyLicense = '777306';
-app.config.globalProperties.$companyACO = '6678';
+let siteProperties = {
+  companyName:      'Atlas Integrated Systems, Inc.',
+  companyNameShort: 'Atlas Integrated Systems',
+  contactEmail:     'info@atlasintegratedsystems.com',
+  contactPhone:     '+19495099605',
+  companyAddress:   '6789 Quail Hill Parkway, Suite #405, Irvine, CA 92603',
+  companyLicense:   '777306',
+  companyACO:       '6678',
+};
+siteProperties.contactPhoneFormatted = useFormatPhone(siteProperties.contactPhone);
+app.config.globalProperties.siteProperties = siteProperties;
+app.provide('siteProperties', siteProperties);
 
 
 // Global Components

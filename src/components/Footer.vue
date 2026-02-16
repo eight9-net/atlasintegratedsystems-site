@@ -1,7 +1,7 @@
 <script setup>
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import { computed } from 'vue';
-  import { useGetImageUrl, useFormatPhone } from '../composables/utils';
+  import { useGetImageUrl } from '../composables/utils';
 
   const currentYear = computed(() => new Date().getFullYear());
 </script>
@@ -16,32 +16,32 @@
           <div class="p-5">
             <FontAwesomeIcon :icon="['fa', 'phone']" size="2xl" />
           </div>
-          <a :href="`tel:${$contactPhone}`" class="ms-1">{{ useFormatPhone($contactPhone) }}</a>
+          <a :href="`tel:${siteProperties.contactPhone}`" class="ms-1">{{ siteProperties.contactPhoneFormatted }}</a>
         </div>
         <div class="w-full m-0 text-center md:w-1/3 p-5">
           <div class="p-5">
             <FontAwesomeIcon :icon="['fa', 'map-location-dot']" size="2xl" />
           </div>
           <a
-            :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent($companyAddress)}`"
+            :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteProperties.companyAddress)}`"
             class="ms-1"
             target="_blank"
           >
-            {{ $companyAddress }}
+            {{ siteProperties.companyAddress }}
           </a>
         </div>
         <div class="w-full mx-0 text-center md:w-1/3 p-5">
           <div class="p-5">
             <FontAwesomeIcon :icon="['fa', 'envelope']" size="2xl" />
           </div>
-          <a :href="`mailto:${$contactEmail}`" class="ms-1">{{ $contactEmail }}</a>
+          <a :href="`mailto:${siteProperties.contactEmail}`" class="ms-1">{{ siteProperties.contactEmail }}</a>
         </div>
       </div>
 
       <div class="w-full m-0 text-center my-3">
-        <img class="max-w-[400px] lg:max-w-[750px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="$companyName" />
-        <p class="mx-3 my-5 text-lg font-bold">CA Lic. #{{ $companyLicense }}&nbsp;&nbsp;&nbsp;ACO {{ $companyACO }}</p>
-        <p class="my-10 text-xs copyright">&copy; {{ currentYear}} All Rights Reserved | {{ $companyName }}</p>
+        <img class="max-w-[400px] lg:max-w-[750px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="siteProperties.companyName" />
+        <p class="mx-3 my-5 text-lg font-bold">CA Lic. #{{ siteProperties.companyLicense }}&nbsp;&nbsp;&nbsp;ACO {{ siteProperties.companyACO }}</p>
+        <p class="my-10 text-xs copyright">&copy; {{ currentYear}} All Rights Reserved | {{ siteProperties.companyName }}</p>
       </div>
 
       <div class="flex items-center justify-center w-full pb-5 text-lg headline">

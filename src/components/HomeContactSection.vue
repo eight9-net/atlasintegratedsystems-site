@@ -10,9 +10,9 @@
     <div class="scroll-target" id="ContactUs">&nbsp;</div>
     <div
       class="bg-center bg-cover contact-us-container"
-      :style="`background-image: url(${useGetImageUrl('turbines-blue-bg.webp')});`"
+      :style="`background-image: url(${useGetImageUrl('amirun-ai-generated-8894644_1280.jpg')});`"
     >
-      <div class="w-full h-full m-0 text-white backdrop-brightness-50">
+      <div class="w-full h-full m-0 text-white backdrop-brightness-40">
         <div class="w-auto">
           <div class="container mx-auto text-center lg:px-40 faq-container py-25">
             <h2 class="mb-10 text-3xl font-normal text-center text-white headline">Contact Us</h2>
@@ -20,14 +20,14 @@
               <p>Call Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'phone']" />
-                <a :href="`tel:${$contactPhone}`" class="ms-1">{{ useFormatPhone($contactPhone) }}</a>
+                <a :href="`tel:${siteProperties.contactPhone}`" class="ms-1">{{ siteProperties.contactPhoneFormatted }}</a>
               </p>
             </div>
             <div class="px-5 mx-auto my-4 md:px-40">
               <p>Email Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'envelope']" />
-                <a :href="`mailto:${$contactEmail}`" class="ms-1">{{ $contactEmail }}</a>
+                <a :href="`mailto:${siteProperties.contactEmail}`" class="ms-1">{{ siteProperties.contactEmail }}</a>
               </p>
             </div>
             <p class="px-5 mx-auto my-4 md:px-40">

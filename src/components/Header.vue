@@ -31,7 +31,7 @@
           />
         </details>
         <router-link :to="{ name: 'home' }">
-          <img class="max-w-[400px] lg:max-w-[500px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="$companyName" />
+          <img class="max-w-[400px] lg:max-w-[500px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="siteProperties.companyName" />
         </router-link>
       </div>
 

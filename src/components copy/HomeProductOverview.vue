@@ -16,7 +16,7 @@
 
               <div class="w-full p-4 lg:w-1/2">
                 <h2 class="mb-10 text-3xl font-normal headline">Seamless SCADA Solutions for Uninterrupted Operations</h2>
-                <p class="mx-auto">{{ $companyName }} capabilities in system design engineering of complete SCADA solutions, coupled with our experienced and professional installation knowledge, allow for seamless delivery and implementation with minimal operational interruption. Our superior communication, automation, and integration capabilities and ability to serve all brands of turbines, both old and new, set us apart from other third-party SCADA providers.</p>
+                <p class="mx-auto">{{ siteProperties.companyName }} capabilities in system design engineering of complete SCADA solutions, coupled with our experienced and professional installation knowledge, allow for seamless delivery and implementation with minimal operational interruption. Our superior communication, automation, and integration capabilities and ability to serve all brands of turbines, both old and new, set us apart from other third-party SCADA providers.</p>
                 <div class="mx-auto mt-5">
                   <ContactButton buttonText="Get in Touch" />
                 </div>

@@ -8,6 +8,7 @@ export function useGetFileUrl(file_path) {
 }
 
 export function useFormatPhone(str) {
+  if (!str) return '';
   return str
     .replace(/\D/g, '')
     .replace(/^(\d{1})(\d{3})(\d{3})(\d{4})/g, "$1 ($2)-$3-$4")
