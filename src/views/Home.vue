@@ -22,16 +22,16 @@
       image="fiberoptic-bg.jpg"
       title="All the services you need, in one place"
       buttonText="View Service Details"
-      buttonRoute="services"
+      :buttonRoute="{ name: 'services' }"
       containerClasses="container mx-auto px-5 md:px-10 py-5"
       backdropClasses=""
     >
       <Gallery
         :images="[
-          { src: 'fiber-switch.jpg', alt: 'Communications Systems Design', route: { name: 'services', hash: 'communications-systems-design' } },
-          { src: 'fiber-cables.jpg', alt: 'Communication System Troubleshooting', route: { name: 'services', hash: 'communication-system-troubleshooting' } },
-          { src: 'fiber-switch.jpg', alt: 'Configuration & Installation of Backbone Infrastructure', route: { name: 'services', hash: 'configuration-installation-backbone-infrastructure' } },
-          { src: 'fiber-switch.jpg', alt: 'Enhanced Access Security', route: { name: 'services', hash: 'enhanced-access-security' } },
+          { src: 'blueprint2.jpg', alt: 'Communications Systems Design', route: { name: 'services', hash: '#CommunicationsSystemsDesign' } },
+          { src: 'field-engineer.jpg', alt: 'Communications Systems Troubleshooting', route: { name: 'services', hash: '#CommunicationsSystemsTroubleshooting' } },
+          { src: 'fiber-switch.jpg', alt: 'Configuration & Installation of Backbone Infrastructure', route: { name: 'services', hash: '#BackboneInfrastructure' } },
+          { src: 'id-badges.jpg', alt: 'Enhanced Access Security', route: { name: 'services', hash: '#EnhancedAccessSecurity' } },
         ]"
         cols="4"
         :labels="true"

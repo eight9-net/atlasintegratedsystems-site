@@ -28,12 +28,10 @@
       { name: 'projects', hash: '#CampPendletonDataCenterProject', title: 'Camp Pendleton Data Center' },
     ],
     services: [
-      { name: 'services', hash: '#CommunicationSystemsDesign', title: 'Communication Systems Design' },
-      { name: 'services', hash: '#ServiceAndSupport', title: 'Service and Support' },
-      { name: 'services', hash: '#Integration', title: 'Integration' },
-      { name: 'services', hash: '#Installation', title: 'Installation' },
-      { name: 'services', hash: '#SolarServices', title: 'Solar Services' },
-      { name: 'services', hash: '#WindServices', title: 'Wind Services' },
+      { name: 'services', hash: '#CommunicationsSystemsDesign', title: 'Communications Systems Design' },
+      { name: 'services', hash: '#CommunicationsSystemsTroubleshooting', title: 'Communications Systems Troubleshooting' },
+      { name: 'services', hash: '#BackboneInfrastructure', title: 'Configuration & Installation of Backbone Infrastructure' },
+      { name: 'services', hash: '#EnhancedAccessSecurity', title: 'Enhanced Access Security' },
     ],
     contact: [
     ],

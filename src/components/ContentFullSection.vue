@@ -1,6 +1,8 @@
 <script setup>
   import { computed } from 'vue';
   import { useGetImageUrl } from '../composables/utils';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
   const props = defineProps({
     name: {
       type: String,
@@ -31,7 +33,7 @@
       required: false,
     },
     buttonRoute: {
-      type: String,
+      type: Object,
       required: false,
     },
     contentClasses: {
@@ -83,7 +85,7 @@
 
               <div class="mx-auto my-5" v-if="props.button">
                 <ContactButton :buttonText="props.buttonText" v-if="!props.buttonRoute" />
-                <button class="btn btn-primary" v-if="props.buttonRoute" :onclick="`window.location.href='${props.buttonRoute}'`">{{ props.buttonText }}</button>
+                <button class="btn btn-primary" v-if="props.buttonRoute" @click="router.push(props.buttonRoute)">{{ props.buttonText }}</button>
               </div>
             </div>
           </div>
