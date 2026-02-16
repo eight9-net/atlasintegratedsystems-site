@@ -1,45 +1,56 @@
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { ref } from 'vue';
-import { useGetImageUrl } from '../composables/utils';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+  import { ref } from 'vue';
+  import { useGetImageUrl } from '../composables/utils';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
 
-const props = defineProps({
-  images: {
-    type: Array,
-    required: true,
-  },
-  cols: {
-    type: String,
-    default: '2',
-  },
-  labels: {
-    type: Boolean,
-    default: false,
-  },
-});
+  const props = defineProps({
+    images: {
+      type: Array,
+      required: true,
+    },
+    cols: {
+      type: String,
+      default: '2',
+    },
+    labels: {
+      type: Boolean,
+      default: false,
+    },
+    labelClasses: {
+      type: String,
+      default: 'block text-center text-black',
+    },
+  });
 
-const isModalOpen = ref(false);
-const currentFullSrc = ref('');
-const currentAlt = ref('');
+  const isModalOpen = ref(false);
+  const currentFullSrc = ref('');
+  const currentAlt = ref('');
 
-const handleClick = (img) => {
-  const url = img.url ? img.url : null;
-  if (url) {
-    window.open(url, '_blank');
-    return;;
-  }
-  currentFullSrc.value = img.src;
-  currentAlt.value = img.alt;
-  isModalOpen.value = true;
-  document.body.style.overflow = 'hidden';
-};
+  const handleClick = (img) => {
+    const url = img.url ? img.url : null;
+    const route = img.route ? img.route : null;
+    if (url) {
+      window.open(url, '_blank');
+      return;
+    }
+    if (route) {
+      router.push(route);
+      return;
+    }
+    currentFullSrc.value = img.src;
+    currentAlt.value = img.alt;
+    isModalOpen.value = true;
+    document.body.style.overflow = 'hidden';
+  };
 
-const closeModal = () => {
-  isModalOpen.value = false;
-  currentFullSrc.value = '';
-  currentAlt.value = '';
-  document.body.style.overflow = 'auto';
-};
+  const closeModal = () => {
+    isModalOpen.value = false;
+    currentFullSrc.value = '';
+    currentAlt.value = '';
+    document.body.style.overflow = 'auto';
+  };
 </script>
 
 <template>
@@ -59,7 +70,7 @@ const closeModal = () => {
             class="w-full h-full"
           />
         </div>
-        <label v-if="image.alt && props.labels" class="block text-center text-black">
+        <label v-if="image.alt && props.labels" :class="props.labelClasses">
           {{ image.alt }}
         </label>
       </div>

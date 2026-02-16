@@ -14,6 +14,10 @@
       type: String,
       required: true,
     },
+    preTitle: {
+      type: String,
+      required: false,
+    },
     title: {
       type: String,
       required: true,
@@ -63,6 +67,7 @@
             <div class="flex">
 
               <div class="flex-1 px-10 py-15" :class="props.contentBgColor">
+                <h2 class="mb-2 text-xl headline uppercase tracking-wide text-primary" v-if="props.preTitle">{{ props.preTitle }}</h2>
                 <h2 class="mb-10 text-3xl font-normal text-left headline">{{ props.title }}</h2>
 
                 <slot />
