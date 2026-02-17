@@ -1,5 +1,6 @@
 <script setup>
   import HomeHero from '../components/HomeHero.vue';
+  import HomeRecentProjects from '../components/HomeRecentProjects.vue';
   import HomeContactSection from '../components/HomeContactSection.vue';
   import HomeFaq from '../components/HomeFaq.vue';
   import ContentFullSection from '../components/ContentFullSection.vue';
@@ -15,6 +16,19 @@
 
     <HomeHero />
 
+    <HomeRecentProjects />
+
+    <ContentLeftSection
+      id="DesignProcess"
+      name="design-process"
+      title="Our Design Process"
+      image="field-engineer2.jpg"
+      buttonText="Submit Project Outline"
+    >
+      <p class="mx-auto my-10">
+        Using the most relevant technologies allows Atlas the flexibility to retrofit as well as build out an entire new infrastructure. This provides the best ROI for our clients. Our technical expertise is unmatched in our ability to provide as-built drawings and matrices for sites that have little or no information on existing infrastructure. This is crucial for finding what may be utilized, saving thousands of dollars and downtime.
+      </p>
+    </ContentLeftSection>
 
     <ContentFullSection
       id="ServicesGallery"
