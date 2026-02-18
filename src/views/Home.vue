@@ -7,7 +7,7 @@
   import ContentLeftSection from '../components/ContentLeftSection.vue';
   import ContentRightSection from '../components/ContentRightSection.vue';
   import Gallery from '../components/Gallery.vue';
-
+  import { useGetImageUrl } from '../composables/utils';
 
 </script>
 
@@ -15,6 +15,151 @@
   <div class="home">
 
     <HomeHero />
+
+
+    <ContentFullSection
+      id="HomeCards"
+      name="home-cards"
+      title=""
+      image=""
+      buttonText="Learn More"
+      containerClasses="px-0 py-0"
+      backdropClasses=""
+      sectionClasses="my-0 pt-20"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-center">
+        <div>
+          <ContentFullSection
+            id="TrainedProfessionals"
+            name="trained-professionals"
+            title="Trained Professionals"
+            image="engineer-tower.jpg"
+            contentClasses="text-black p-5 min-h-[400px] max-h-[400px] max-w-[650px]"
+            containerClasses="container mx-auto p-0"
+            backdropClasses="mr-[50%] bg-white/40 backdrop-brightness-80"
+            bgClasses="bg-cover bg-bottom h-full min-h-[400px] max-h-[400px] max-w-[650px]"
+            :button="false"
+            sectionClasses="my-0 pt-0 flex justify-end"
+            titleClasses="mb-10 text-2xl lg:text-3xl font-normal headline"
+          >
+            <p class="text-normal lg:text-lg">
+              Our engineers have completed the necessary professional certifications and participate in ongoing training to keep up with communication industry standards.
+            </p>
+          </ContentFullSection>
+        </div>
+        <div>
+          <ContentFullSection
+            id="ContinuousSupport"
+            name="continuous-support"
+            title="Continuous Support"
+            image="monitor.jpg"
+            contentClasses="text-white p-5 min-h-[400px] max-h-[400px] max-w-[650px]"
+            containerClasses="container mx-auto p-0"
+            backdropClasses="backdrop-brightness-30 mr-[50%]"
+            bgClasses="bg-cover bg-bottom h-full min-h-[400px] max-h-[400px] max-w-[650px]"
+            :button="false"
+            sectionClasses="my-0 pt-0 flex justify-start"
+            titleClasses="mb-10 text-2xl lg:text-3xl font-normal headline"
+          >
+            <p class="text-normal lg:text-lg">
+              Get peace of mind with technology and 24/7 expert monitoring. Our customers rely on us to safeguard their businesses from outages.
+            </p>
+          </ContentFullSection>
+        </div>
+        <div>
+          <ContentFullSection
+            id="CustomDesignedSolutions"
+            name="custom-designed-solutions"
+            title="Custom Designed Solutions"
+            image="blueprint.jpg"
+            contentClasses="text-black p-5 min-h-[400px] max-h-[400px] max-w-[650px]"
+            containerClasses="container mx-auto p-0"
+            backdropClasses="md:ml-[50%] bg-white/50 md:backdrop-brightness-80"
+            bgClasses="bg-cover bg-bottom h-full min-h-[400px] max-h-[400px] max-w-[650px]"
+            :button="false"
+            sectionClasses="my-0 pt-0 flex justify-end"
+            titleClasses="mb-10 text-2xl lg:text-3xl font-normal headline"
+          >
+            <p class="text-normal lg:text-lg">
+              We serve a variety of industries with varied needs. We offer systems and services for commercial, government, and military spaces.
+            </p>
+          </ContentFullSection>
+        </div>
+        <div>
+          <ContentFullSection
+            id="TrustedBrands"
+            name="trusted-brands"
+            title="Trusted Brands"
+            image="server-gear.jpg"
+            contentClasses="text-white p-5 min-h-[400px] max-h-[400px] max-w-[650px]"
+            containerClasses="container mx-auto p-0"
+            backdropClasses="backdrop-brightness-30 ml-[50%]"
+            bgClasses="bg-cover bg-bottom min-h-[400px] max-h-[400px] max-w-[650px]"
+            :button="false"
+            sectionClasses="my-0 pt-0 flex justify-start"
+            titleClasses="mb-10 text-2xl lg:text-3xl font-normal headline"
+          >
+            <p class="text-normal lg:text-lg">
+              Atlas Integrated Systems in Irvine, CA is a direct supplier of quality communication system products from well-known brands from a wide range of suppliers.
+            </p>
+          </ContentFullSection>
+        </div>
+      </div>
+    </ContentFullSection>
+
+    <ContentFullSection
+      id="Metrics"
+      name="metrics"
+      title="Our Metrics"
+      image="fiber-optic-bg.jpg"
+      backdropClasses="backdrop-brightness-25"
+      buttonText="Contact Us"
+      containerClasses="container mx-auto px-5 md:px-20 py-25"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center text-white headline my-10">
+        <div>
+          <h3 class="text-4xl font-bold">22+</h3>
+          <p class="text-lg font-normal">Years of Experience</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-bold">100%</h3>
+          <p class="text-lg font-normal">Customer Satisfaction</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-bold">500+</h3>
+          <p class="text-lg font-normal">Completed Projects</p>
+        </div>
+        <div>
+          <h3 class="text-4xl font-bold">25+</h3>
+          <p class="text-lg font-normal">Subcontractor Relationships</p>
+        </div>
+      </div>
+    </ContentFullSection>
+
+    <ContentRightSection
+      id="RequestConsultation"
+      name="request-consultation"
+      title="Request a Consultation"
+      image="solar-turbine-blueprint.jpg"
+      buttonText="Contact Us"
+    >
+      <p class="mx-auto my-10">
+        Our team will be happy to assist you with your upcoming communication system design.
+      </p>
+    </ContentRightSection>
+
+    <ContentLeftSection
+      id="WhoWeAre"
+      name="who-we-are"
+      preTitle="Who We Are"
+      title="Building Integrity in Communications"
+      image="engineers-solar.jpg"
+      buttonText="Tell Us More"
+    >
+      <p class="mx-auto my-10">
+        Our company is a leader in providing design, production and maintenance support of communications systems for industrial and municipal customers in Southern California. While our products and systems are primarily focused on the physical layer of networked applications, our Municipal Systems business also offers services and systems for Homeland Security, Government and commercial applications. We also provide a wide range of services and support to our customers through our network of subcontractors.
+      </p>
+    </ContentLeftSection>
 
     <HomeRecentProjects />
 

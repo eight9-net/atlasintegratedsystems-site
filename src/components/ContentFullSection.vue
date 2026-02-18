@@ -56,6 +56,16 @@
       required: false,
       default: 'fixed-bg',
     },
+    sectionClasses: {
+      type: String,
+      required: false,
+      default: 'my-10 pt-10',
+    },
+    titleClasses: {
+      type: String,
+      required: false,
+      default: 'mb-10 text-3xl font-normal headline',
+    },
   });
 
   const bgStyleComputed = computed(() => {
@@ -68,18 +78,18 @@
 
 </script>
 <template>
-  <section :class="`${props.name}-section my-10 pt-10`">
+  <section :class="`${props.name}-section ${props.sectionClasses}`">
     <div class="scroll-target" :id="props.id">&nbsp;</div>
     <div
       :class="bgClassesComputed"
       :style="bgStyleComputed"
     >
-      <div class="w-full h-full m-0">
+      <div class="w-full h-full m-0 flex-1">
         <div class="w-auto" :class="props.backdropClasses">
           <div :class="`${props.containerClasses} ${props.name}-container`">
             <div :class="props.contentClasses">
               <h2 class="mb-2 text-xl headline uppercase tracking-wide text-primary" v-if="props.preTitle">{{ props.preTitle }}</h2>
-              <h2 class="mb-10 text-3xl font-normal headline" v-if="props.title">{{ props.title }}</h2>
+              <h2 :class="props.titleClasses" v-if="props.title">{{ props.title }}</h2>
 
               <slot />
 
