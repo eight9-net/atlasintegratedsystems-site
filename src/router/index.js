@@ -10,7 +10,7 @@ const routes = [
       {
         path: '',
         name: 'home',
-        component: Home
+        component: Home,
       },
       {
         path: 'projects',
@@ -23,14 +23,9 @@ const routes = [
         component: () => import('../views/Services.vue')
       },
       {
-        path: 'quote',
+        path: 'request-a-quote',
         name: 'quote',
-        component: () => import('../views/Contact.vue')
-      },
-      {
-        path: 'contact',
-        name: 'contact',
-        component: () => import('../views/Contact.vue')
+        component: () => import('../views/RequestAQuote.vue')
       },
       {
         path: 'sample',

@@ -73,7 +73,7 @@
   });
 
   const bgClassesComputed = computed(() => {
-    return props.image ? `${props.bgClasses}` : '';
+    return props.bgClasses ? `${props.bgClasses}` : '';
   });
 
 </script>
@@ -84,11 +84,11 @@
       :class="bgClassesComputed"
       :style="bgStyleComputed"
     >
-      <div class="w-full h-full m-0 flex-1">
+      <div class="flex-1 w-full h-full m-0">
         <div class="w-auto" :class="props.backdropClasses">
           <div :class="`${props.containerClasses} ${props.name}-container`">
             <div :class="props.contentClasses">
-              <h2 class="mb-2 text-xl headline uppercase tracking-wide text-primary" v-if="props.preTitle">{{ props.preTitle }}</h2>
+              <h2 class="mb-2 text-xl tracking-wide uppercase headline text-primary" v-if="props.preTitle">{{ props.preTitle }}</h2>
               <h2 :class="props.titleClasses" v-if="props.title">{{ props.title }}</h2>
 
               <slot />

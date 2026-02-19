@@ -50,7 +50,7 @@
     <router-link :to="{ name: 'home' }" class="py-1.5 px-3 rounded-md font-medium text-lg hover:text-sky-400 active:text-sky-400 transition-colors">Home</router-link>
     <DropdownMenu title="Projects" :links="links.projects" :hover="props.hover" :border="props.border" :link="{name: 'projects'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
     <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'services'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
-    <router-link :to="{ name: 'contact' }" class="py-1.5 px-3 rounded-md font-medium text-lg hover:text-sky-400 active:text-sky-400 transition-colors">Contact</router-link>
+    <router-link :to="{ name: 'quote' }" class="py-1.5 px-3 rounded-md font-medium text-lg hover:text-sky-400 active:text-sky-400 transition-colors">Request A Quote</router-link>
   </ul>
 </template>
 
