@@ -22,7 +22,7 @@
     ],
     projects: [
       { name: 'projects', hash: '#SanDiegoPureWaterProject', title: 'City of San Diego Pure Water Project' },
-      { name: 'projects', hash: '#LawaiiSolarProject', title: 'AES-KIUC Lawaii Solar Project' },
+      { name: 'projects', hash: '#LawaiSolarProject', title: 'AES-KIUC Lāwaʻi Solar Project' },
       { name: 'projects', hash: '#PMRFPowerGridProject', title: 'FY16 MCON Project P-416 Energy PMRF Power Grid Consolidation' },
       { name: 'projects', hash: '#RialtoBioEnergyProject', title: 'Rialto Bio Energy Facility' },
       { name: 'projects', hash: '#CampPendletonDataCenterProject', title: 'Camp Pendleton Data Center' },
