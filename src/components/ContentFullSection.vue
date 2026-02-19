@@ -94,8 +94,7 @@
               <slot />
 
               <div class="mx-auto my-5" v-if="props.button">
-                <ContactButton :buttonText="props.buttonText" v-if="!props.buttonRoute" />
-                <button class="btn btn-primary" v-if="props.buttonRoute" @click="router.push(props.buttonRoute)">{{ props.buttonText }}</button>
+                <ContactButton :buttonText="props.buttonText" :buttonRoute="props.buttonRoute" />
               </div>
             </div>
           </div>
