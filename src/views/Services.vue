@@ -14,9 +14,9 @@
   />
 
   <ContentRightSection
-    id="CommunicationsSystemDesign"
-    name="communications-system-design"
-    title="Communications System Design"
+    id="CommunicationsSystemsDesign"
+    name="communications-systems-design"
+    title="Communications Systems Design"
     image="blueprint.jpg"
     contentBgColor="bg-white/80"
     buttonText="Get Started"
@@ -28,8 +28,8 @@
   </ContentRightSection>
 
   <ContentLeftSection
-    id="Troubleshooting"
-    name="troubleshooting"
+    id="CommunicationsSystemsTroubleshooting"
+    name="communications-systems-troubleshooting"
     title="Communications Systems Troubleshooting"
     image="fiber-tester.jpg"
     contentBgColor="bg-white/80"
