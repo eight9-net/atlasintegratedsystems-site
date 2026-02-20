@@ -1,6 +1,6 @@
 <script setup>
   import SanDiegoPureWaterProject from '../components/SanDiegoPureWaterProject.vue';
-  import LawaiiSolarProject from '../components/LawaiSolarProject.vue';
+  import LawaiSolarProject from '../components/LawaiSolarProject.vue';
   import PMRFPowerGridProject from '../components/PMRFPowerGridProject.vue';
   import RialtoBioEnergyProject from '../components/RialtoBioEnergyProject.vue';
   import CampPendletonDataCenterProject from '../components/CampPendletonDataCenterProject.vue';
@@ -9,7 +9,7 @@
 
   <SanDiegoPureWaterProject />
 
-  <LawaiiSolarProject />
+  <LawaiSolarProject />
 
   <PMRFPowerGridProject />
 

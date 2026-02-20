@@ -9,10 +9,10 @@
       route: { name: 'projects', hash: '#SanDiegoPureWaterProject' },
     },
     {
-      label: 'Lawaii Solar',
-      title: 'AES-KIUC Lawaii Solar Project',
+      label: 'Lāwa’i Solar',
+      title: 'AES-KIUC Lāwa’i Solar Project',
       overlay: "<p>Atlas Integrated Systems, Inc. played a crucial role in the Lāwa’i Solar Project, known as the world\'s largest solar storage peaker at the time, by installing cutting-edge SCADA communications and energy control networks beginning in 2018. They expertly handled the complex task of integrating new fiber optic and copper communications into the active plant, contributing to the project\'s success through 2019, with ongoing enhancements for new and reconfigured systems. Post-completion, AES recognized Atlas\'s expertise by entrusting them with the design of future PoE panels and setting standards for Operations and Maintenance buildings.</p>",
-      route: { name: 'projects', hash: '#LawaiiSolarProject' },
+      route: { name: 'projects', hash: '#LawaiSolarProject' },
     },
     {
       label: 'PMRF Power Grid',
@@ -40,11 +40,12 @@
     id="RecentProjects"
     name="recent-projects"
     title="Recent Projects"
-    image="lawaii/pexels-photo-2800845-2880w.jpeg"
+    image="lawai/lawai-solar.jpg"
     backdropClasses="bg-primary backdrop-brightness-25"
     bgClasses="bg-cover bg-center"
     contentClasses="text-center text-white p-10"
     :button="false"
+    containerClasses="container mx-auto px-5 md:px-5 lg:px-20 py-25"
   >
     <Carousel
       :slides="projectSlides"

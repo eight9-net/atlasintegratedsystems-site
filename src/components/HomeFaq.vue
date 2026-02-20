@@ -53,7 +53,7 @@
   <ContentFullSection
     name="faq"
     id="FAQs"
-    image="solar-blur-bg.webp"
+    image="fiberoptic-bg.jpg"
     title="Frequently Asked Questions"
     :button="false"
   >
