@@ -32,7 +32,11 @@
     },
     classes: {
       type: String,
-      default: 'bg-base-100 rounded-t-none p-2 subnav z-50 w-85 text-black'
+      default: 'bg-base-100 rounded-t-none p-2 subnav z-50 w-85 text-black text-lg'
+    },
+    textSize: {
+      type: String,
+      default: 'text-lg'
     },
   });
 
@@ -65,13 +69,13 @@
 <template>
   <li>
     <details v-element-hover="[onHover, { delayEnter: 300 }]" :open="isHovered">
-      <summary class="hover:text-sky-400 active:text-sky-400 transition-colors">
+      <summary :class="`${props.textSize} transition-colors hover:text-secondary active:text-secondary`">
         <a v-if="link" @click="goto(link, true)">{{ title }}</a>
         <span v-else>{{ title }}</span>
       </summary>
       <ul :class="`${classes} ${borderClass}`">
         <li v-for="(item, index) in links" :key="index">
-          <a href="javascript://" class="hover:text-sky-400 active:text-sky-400 transition-colors" @click="goto({ name: item.name, hash: item.hash })">{{ item.title }}</a>
+          <a href="javascript://" class="transition-colors hover:text-secondary active:text-secondary" @click="goto({ name: item.name, hash: item.hash })">{{ item.title }}</a>
         </li>
       </ul>
     </details>

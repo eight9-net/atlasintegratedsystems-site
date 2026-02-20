@@ -2,7 +2,11 @@
   const props = defineProps({
     classes: {
       type: String,
-      default: 'menu menu-horizontal px-1 text-lg mx-auto justify-center'
+      default: 'menu menu-horizontal text-lg font-medium px-1 mx-auto justify-center'
+    },
+    textSize: {
+      type: String,
+      default: 'text-2xl',
     },
     hover: {
       type: Boolean,
@@ -47,10 +51,10 @@
 
 <template>
   <ul :class="props.classes">
-    <router-link :to="{ name: 'home' }" class="py-1.5 px-3 rounded-md font-medium text-lg hover:text-sky-400 active:text-sky-400 transition-colors">Home</router-link>
-    <DropdownMenu title="Projects" :links="links.projects" :hover="props.hover" :border="props.border" :link="{name: 'projects'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
-    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'services'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
-    <router-link :to="{ name: 'quote' }" class="py-1.5 px-3 rounded-md font-medium text-lg hover:text-sky-400 active:text-sky-400 transition-colors">Request A Quote</router-link>
+    <router-link :to="{ name: 'home' }" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Home</router-link>
+    <DropdownMenu title="Projects" :textSize="props.textSize" :links="links.projects" :hover="props.hover" :border="props.border" :link="{name: 'projects'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Services" :textSize="props.textSize" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'services'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <router-link :to="{ name: 'quote' }" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Request A Quote</router-link>
   </ul>
 </template>
 

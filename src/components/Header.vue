@@ -16,7 +16,7 @@
 
 <template>
   <header class="sticky top-0 z-50 header">
-    <div class="shadow-sm navbar bg-header-color text-white">
+    <div class="bg-gray-400 shadow-sm text-primary navbar">
       <div class="navbar-start flex-2">
         <details ref="mobileMenuElement" class="dropdown">
           <summary class="btn btn-lg btn-ghost lg:hidden" @click="toggleMobileNav">
@@ -31,11 +31,11 @@
           />
         </details>
         <router-link :to="{ name: 'home' }">
-          <img class="max-w-[400px] lg:max-w-[500px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="siteProperties.companyName" />
+          <img class="max-w-[200px] lg:max-w-[300px] mx-auto" :src="useGetImageUrl('atlas-logo.svg')" :alt="siteProperties.companyName" />
         </router-link>
       </div>
 
-      <div class="flex-auto hidden navbar-center lg:flex">
+      <div class="flex-auto hidden text-3xl navbar-center lg:flex">
         <navigation-menu />
       </div>
 

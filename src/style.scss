@@ -5,6 +5,14 @@
   root: ":root";
   logs: true;
 }
+@plugin "daisyui/theme" {
+  name: "corporate";
+  default: true;
+  --color-primary: oklch(27.03% 0.0714 252.67);
+  // --color-secondary: oklch(58% 0.158 241.966);
+  --color-secondary: oklch(0.4596 0.1046 251.52);
+}
+
 
 html {
   scroll-behavior: smooth;

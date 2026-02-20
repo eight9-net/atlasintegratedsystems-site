@@ -12,7 +12,7 @@
 
 <template>
   <div :class="props.itemClasses">
-    <FontAwesomeIcon :icon="['fa-solid', 'fa-chevron-right']" class="mx-1 text-blue-400" />
+    <FontAwesomeIcon :icon="['fa-solid', 'fa-chevron-right']" class="mx-1 text-secondary" />
     <slot></slot>
   </div>
 </template>
