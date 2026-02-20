@@ -41,8 +41,9 @@
     name="recent-projects"
     title="Recent Projects"
     image="lawaii/pexels-photo-2800845-2880w.jpeg"
-    backdropClasses="backdrop-brightness-25"
+    backdropClasses="bg-primary backdrop-brightness-25"
     bgClasses="bg-cover bg-center"
+    contentClasses="text-center text-white p-10"
     :button="false"
   >
     <Carousel

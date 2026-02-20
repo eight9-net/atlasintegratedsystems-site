@@ -7,7 +7,6 @@
   import ContentLeftSection from '../components/ContentLeftSection.vue';
   import ContentRightSection from '../components/ContentRightSection.vue';
   import Gallery from '../components/Gallery.vue';
-  import { useGetImageUrl } from '../composables/utils';
 
 </script>
 
@@ -27,7 +26,7 @@
       backdropClasses=""
       sectionClasses="my-0 pt-20"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-center">
+      <div class="grid grid-cols-1 gap-5 text-center md:grid-cols-2">
         <div>
           <ContentFullSection
             id="TrainedProfessionals"
@@ -116,7 +115,7 @@
       buttonText="Contact Us"
       containerClasses="container mx-auto px-5 md:px-20 py-25"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center text-white headline my-10">
+      <div class="grid grid-cols-1 gap-10 my-10 text-center text-white md:grid-cols-2 lg:grid-cols-4 headline">
         <div>
           <h3 class="text-4xl font-bold">22+</h3>
           <p class="text-lg font-normal">Years of Experience</p>
@@ -209,7 +208,7 @@
       contentClasses="bg-white/80 text-black p-10"
     >
       <p class="mx-auto my-10 text-lg font-normal headline">
-        “We can find a solution for any communication system”. That’s a bold statement… but we are confident that we can implement a system that encompasses multiple disciplines to achieve our clients' needs and in some cases exceeds expectations.
+        “We can find a solution for any communication system”. That's a bold statement… but we are confident that we can implement a system that encompasses multiple disciplines to achieve our clients' needs and in some cases exceeds expectations.
       </p>
     </ContentFullSection>
 
@@ -225,7 +224,7 @@
         Project Description: Troubleshoot South Bay Water Treatment Facility to Metropolitan Bio-Solids Complex Communication Infrastructure
       </p>
       <p class="mx-auto my-10">
-        The City of San Diego’s pipeline and communications network infrastructure was finally linked together. However, the signal loss was too great from its South Bay facilities to its Operations Center over 22 miles away.  Segments had been patched together and installed over a period of more than 10 years in some areas.
+        The City of San Diego's pipeline and communications network infrastructure was finally linked together. However, the signal loss was too great from its South Bay facilities to its Operations Center over 22 miles away.  Segments had been patched together and installed over a period of more than 10 years in some areas.
       </p>
       <p class="mx-auto my-10">
         Atlas was able to isolate the problem areas, and fix all the problems without disturbing the citywide plant, lowering the signal loss substantially and establishing the communications link the City required.
@@ -237,7 +236,7 @@
       name="cost-efficient-network-upgrades"
       title="Cost Efficient Network Upgrades"
       image="solar-plant.jpg"
-      contentBgColor="bg-header-color text-white"
+      contentBgColor="bg-primary text-white"
       buttonText="Get Started"
     >
       <p class="mx-auto my-10 text-lg font-normal headline">
@@ -253,7 +252,7 @@
       name="innovative-solutions"
       title="Innovative Solutions, High-Tech Methods"
       image="turbines-clouds.webp"
-      contentBgColor="bg-header-color text-white"
+      contentBgColor="bg-primary text-white"
       buttonText="Contact Us"
     >
       <p class="mx-auto my-10 text-lg font-normal headline">

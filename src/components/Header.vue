@@ -24,10 +24,11 @@
             <font-awesome-icon :icon="['fa', 'times']" size="lg" v-if="isOpen" />
           </summary>
           <navigation-menu
-            classes="menu menu-compact text-lg dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100 text-black"
+            classes="menu menu-compact text-lg dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100 text-black font-medium"
             :hover="false"
             :border="false"
             @emitCloseMenu="handleCloseMenu"
+            textSize="text-lg"
           />
         </details>
         <router-link :to="{ name: 'home' }">
