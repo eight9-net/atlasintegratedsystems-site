@@ -1,5 +1,4 @@
 <script setup>
-  import { useGetImageUrl } from '../composables/utils';
   import PageHero from '../components/PageHero.vue';
   import RequestAQuoteForm from '../components/RequestAQuoteForm.vue';
 </script>

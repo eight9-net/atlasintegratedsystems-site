@@ -1,4 +1,8 @@
 <script setup>
+  import { shallowRef } from 'vue';
+  import DropdownMenu from './DropdownMenu.vue';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
   const props = defineProps({
     classes: {
       type: String,
@@ -17,8 +21,6 @@
       default: true
     },
   });
-  import { shallowRef } from 'vue';
-  import DropdownMenu from './DropdownMenu.vue';
 
 
   const links = shallowRef({
@@ -44,17 +46,26 @@
   const isHorizontal = shallowRef(props.classes.includes('menu-horizontal'));
 
   const emit = defineEmits(['emitCloseMenu']);
-  const handleCloseMenu = () => {
+  function handleCloseMenu() {
     emit('emitCloseMenu');
-  };
+  }
+
+  function goto(link, sectionMenu = false) {
+    if (sectionMenu && props.isHorizontal) {
+      router.push(link);
+    } else if (!sectionMenu) {
+      router.push(link);
+      handleCloseMenu();
+    }
+  }
 </script>
 
 <template>
   <ul :class="props.classes">
-    <router-link :to="{ name: 'home' }" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Home</router-link>
+    <a href="javascript://" @click="goto({ name: 'home' })" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Home</a>
     <DropdownMenu title="Projects" :textSize="props.textSize" :links="links.projects" :hover="props.hover" :border="props.border" :link="{name: 'projects'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
     <DropdownMenu title="Services" :textSize="props.textSize" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'services'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
-    <router-link :to="{ name: 'quote' }" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Request A Quote</router-link>
+    <a href="javascript://" @click="goto({ name: 'quote' })" :class="`${props.textSize} py-1.5 px-3 rounded-md font-medium hover:text-secondary active:text-secondary transition-colors`">Request A Quote</a>
   </ul>
 </template>
 
