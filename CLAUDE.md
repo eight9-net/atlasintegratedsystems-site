@@ -30,7 +30,7 @@ No test runner or linter is configured.
 
 ### Routing & Layout
 
-All routes are children of `MainLayout.vue`, which provides the shared Navbar/Footer shell. Only the Home view is eagerly loaded; all other views (`Projects`, `Services`, `Contact`, `Sample`) are lazy-loaded via dynamic imports. Routes are defined in `src/router/index.js`.
+All routes are children of `MainLayout.vue`, which provides the shared Header/Footer shell. Only the Home view is eagerly loaded; all other views (`Projects`, `Services`, `RequestAQuote`, `Sample`) are lazy-loaded via dynamic imports. Routes are defined in `src/router/index.js`.
 
 ### Global Components
 
@@ -38,15 +38,15 @@ Four components are registered globally in `src/main.js` and available in all te
 
 ### Global Properties
 
-Company info is available on all component instances via `siteProperties` (set in `src/main.js`).
+Company info is available via `siteProperties` — set as a global property (`this.siteProperties` in Options API) and also provided via `app.provide()` (use `inject('siteProperties')` in Composition API). Defined in `src/main.js`.
 
 ### API Layer
 
-`src/https.js` exports an Axios-based client with a single endpoint — `sendContactForm()` POSTs to an AWS API Gateway Lambda at a hardcoded URL with `app_key: 'scada'`. The Pinia store in `src/stores/contact.js` wraps this call and manages form/loading state.
+`src/https.js` exports an Axios-based client with a single endpoint — `sendContactForm()` POSTs to an AWS API Gateway Lambda at a hardcoded URL with `app_key: 'atlas'`. The Pinia store in `src/stores/contact.js` wraps this call and manages form/loading state.
 
 ### Composables
 
-`src/composables/utils.js` provides `useGetImageUrl(path)`, `useGetFileUrl(path)`, and `useFormatPhone(str)` for asset URL resolution and phone formatting.
+`src/composables/utils.js` provides `useGetImageUrl(path)`, `useGetFileUrl(path)`, and `useFormatPhone(str)` for asset URL resolution and phone formatting. Image URLs resolve to `public/images/` (e.g., `useGetImageUrl('hero-bg-1.jpg')` → `/images/hero-bg-1.jpg`). Project-specific images are organized in subdirectories (e.g., `public/images/lawai/`, `public/images/sd_water/`).
 
 ### Styling Conventions
 
@@ -58,7 +58,7 @@ Company info is available on all component instances via `siteProperties` (set i
 
 ### Static Content
 
-Project data and service descriptions live in `site_files/` as static content directories.
+Source imagery and assets live in `site_files/`. Runtime images served to the browser go in `public/images/`. The DaisyUI `corporate` theme has custom primary/secondary color overrides in `src/style.scss`.
 
 ## Deployment
 
