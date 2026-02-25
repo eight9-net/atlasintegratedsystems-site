@@ -4,7 +4,7 @@
     image: {
       type: String,
       required: false,
-      default: 'products-hero-bg.jpg',
+      default: 'hero-bg-1.jpg',
     },
     title: {
       type: String,
@@ -23,6 +23,11 @@
       type: Boolean,
       default: true,
     },
+    imageBgClasses: {
+      type: String,
+      required: false,
+      default: 'bg-fixed bg-center bg-cover',
+    },
   });
 </script>
 <template>
@@ -31,7 +36,7 @@
       class="hero min-h-[640px] w-screen relative w-full overflow-hidden"
     >
       <div
-        class="absolute inset-0 bg-fixed bg-center bg-cover hero-overlay"
+        :class="`absolute inset-0 hero-overlay ${props.imageBgClasses}`"
         :style="`background-image: url(${useGetImageUrl(props.image)});`"
       ></div>
       <div class="absolute inset-0 bg-black opacity-40"></div>
