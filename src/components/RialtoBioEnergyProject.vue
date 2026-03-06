@@ -28,7 +28,8 @@ import ContentRightSection from './ContentRightSection.vue';
     id="RialtoBioEnergyProjectInnovations"
     name="rialto-bio-energy-project-innovations"
     title="Innovative Bioenergy Technology"
-    image="rialto_bioenergy/rialto-bioenergy-image-hero.jpg"
+    image="rialto_bioenergy/biofuel-graph.jpg"
+    bgClasses="bg-contain bg-no-repeat bg-center"
     :button="false"
   >
     <p class="mx-auto my-10">
@@ -40,7 +41,7 @@ import ContentRightSection from './ContentRightSection.vue';
     id="RialtoBioEnergyProjectImpact"
     name="rialto-bio-energy-project-impact"
     title="Environmental and Economic Benefits"
-    image="rialto_bioenergy/rialto-bioenergy-image-hero.jpg"
+    image="rialto_bioenergy/rialto-bioenergy-image.png"
     :button="false"
   >
     <p class="mx-auto my-10">
@@ -52,7 +53,7 @@ import ContentRightSection from './ContentRightSection.vue';
     id="RialtoBioEnergyProjectCommunity"
     name="rialto-bio-energy-project-community"
     title="Community Engagement and Education"
-    image="rialto_bioenergy/rialto-bioenergy-image-hero.jpg"
+    image="rialto_bioenergy/clean-energy-education.jpg"
     :button="false"
   >
     <p class="mx-auto my-10">
